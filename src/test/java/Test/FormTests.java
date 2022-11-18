@@ -8,31 +8,28 @@ import org.testng.annotations.*;
 
 
 public class FormTests {
-     public static final WebDriver driver = new ChromeDriver();
+    public ChromeDriver driver = new ChromeDriver();
 
     @BeforeSuite
-    public static void main(String[] args) {
+    public void setting() {
         // ChromeDriver location set up in Utils class
         System.setProperty("webdriver.chrome.driver", utils.UtilsDriver.CHROME_DRIVER_LOCATION);
         driver.get(utils.UtilsDriver.BASE_URL);
-
-
     }
 
 
-  @Test(testName = "Submit a WebForm")
-  public static void submitForm(){
-      FormSteps webForm = new FormSteps();
+    @Test(testName = "Submit a WebForm")
+    public void submitForm(){
+        FormSteps webForm = new FormSteps(driver);
         webForm.enterFirstName();
         webForm.enterLastName();
         webForm.enterJob();
         webForm.pressSubmitButton();
-        webForm.verifyAlertSuccess();
-
+        //webForm.verifyAlertSuccess();
     }
 
     @AfterSuite
-    public static void cleanUp(){
+    public void cleanUp(){
         driver.manage().deleteAllCookies();
         driver.close();
     }

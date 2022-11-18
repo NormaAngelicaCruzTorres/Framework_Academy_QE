@@ -1,17 +1,18 @@
 package Step;
 
 import Page.FormPages;
-import Utilities.utils;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.text.Normalizer;
 
 public class FormSteps extends FormPages{
 
+    public FormSteps(ChromeDriver driver) {
+        super(driver);
+    }
+
     public void enterFirstName(){
         String FIRST_NAME = "Normita";
-
-        this.first_name.sendKeys(FIRST_NAME);
 
     }
 
@@ -41,11 +42,4 @@ public class FormSteps extends FormPages{
 
     }
 
-
-
-
-
-
 }
-
-
