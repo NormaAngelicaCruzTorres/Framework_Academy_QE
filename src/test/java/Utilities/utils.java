@@ -8,18 +8,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class utils {
 
-    public WebDriver driver;
-    protected WebElement webElement;
+  public WebDriver driver;
+  protected WebElement webElement;
 
-    public utils(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
+  public utils(WebDriver driver) {
+    this.driver = driver;
+    PageFactory.initElements(driver, this);
+  }
 
-    public static class UtilsDriver {
+  public static class UtilsDriver {
 
-        public static String BASE_URL = "https://formy-project.herokuapp.com/form";
-        public static String CHROME_DRIVER_LOCATION = "chromedriver";
-    }
+    public static String BASE_URL = "https://formy-project.herokuapp.com/form";
+    public static String CHROME_DRIVER_LOCATION = "chromedriver";
+    public static String EDGE_DRIVER_LOCATION = "msedgedriver.exe";
+    public static String FIREFOX_DRIVER_LOCATION = "geckodriver";
+  }
 
 }
