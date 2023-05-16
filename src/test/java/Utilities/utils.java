@@ -5,6 +5,7 @@ package Utilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class utils {
 
@@ -20,6 +21,9 @@ public class utils {
 
         public static String BASE_URL = "https://formy-project.herokuapp.com/form";
         public static String CHROME_DRIVER_LOCATION = "chromedriver";
+        public static String FIREFOX_DRIVER_LOCATION = "geckodriver";
+        public static String EDGE_DRIVER_LOCATION = "msedge";
+
     }
 
 }

@@ -1,12 +1,15 @@
 package Page;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class FormPages {
-    protected ChromeDriver driver;
-    public FormPages(ChromeDriver driver) {
+    protected WebDriver driver;
+
+    public FormPages(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
