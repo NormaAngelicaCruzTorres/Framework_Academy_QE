@@ -21,16 +21,14 @@ public class FormTests {
 
         // System.setProperty("webdriver.chrome.driver", utils.UtilsDriver.CHROME_DRIVER_LOCATION);
         // driver = new ChromeDriver();
-        //System.setProperty("webdriver.edge.driver", utils.UtilsDriver.FIREFOX_DRIVER_LOCATION);
-        // driver = new EdgeDriver();
-        System.setProperty("webdriver.firefox.driver", utils.UtilsDriver.FIREFOX_DRIVER_LOCATION);
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.edge.driver", utils.UtilsDriver.EDGE_DRIVER_LOCATION);
+        driver = new EdgeDriver();
+        //System.setProperty("webdriver.firefox.driver", utils.UtilsDriver.FIREFOX_DRIVER_LOCATION);
+        //driver = new FirefoxDriver();
         driver.get(utils.UtilsDriver.BASE_URL);
 
         //Report Generator
         this.report = new reportGenerator("submit Web Report");
-
-
     }
 
 
@@ -55,6 +53,6 @@ public class FormTests {
     public void cleanUp(){
         this.report.finishReport();
         driver.manage().deleteAllCookies();
-        driver.close();
+        driver.quit();
     }
 }
