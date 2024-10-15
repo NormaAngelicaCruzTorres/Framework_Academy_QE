@@ -18,12 +18,9 @@ public class utils {
     }
 
     public static class UtilsDriver {
-
         public static String BASE_URL = "https://formy-project.herokuapp.com/form";
         public static String CHROME_DRIVER_LOCATION = "chromedriver";
         public static String FIREFOX_DRIVER_LOCATION = "geckodriver";
-        public static String EDGE_DRIVER_LOCATION = "msedge";
-
+        public static String EDGE_DRIVER_LOCATION = "msedgedriver.exe";
     }
-
 }
